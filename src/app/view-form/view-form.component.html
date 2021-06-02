@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-content>
+    <div class="hearder">
+      <h1>Courier Service</h1>
+    </div>
+    <img src="../../assets/images (1).jpg" />
+    <br />
+    <br />
+
+    <button (click)="add()" mat-button color="primary">Add</button>
+    <div style="align-items: center;padding: 95px;">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Sr No.</th>
+            <th>Pickup Address</th>
+            <th>Drop Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              {{ dataReceive.pickupAddres }}
+            </td>
+            <td>{{ dataReceive.dropAddres }}</td>
+
+            <th>
+              <button (click)="edit()" mat-button color="primary">Edit</button>
+
+              <button (click)="Delete()" mat-button color="primary">
+                Delete
+              </button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

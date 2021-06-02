@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-card-content>
+    <div class="hearder">
+      <h1>Courier Service</h1>
+    </div>
+    <img src="../../assets/images (1).jpg" />
+    <br />
+    <br />
+    <form (ngSubmit)="onSubmit(form)" name="form" [formGroup]="form">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Pickup Location is : </mat-label>
+        <input
+          formControlName="pickupAddres"
+          matInput
+
+          required
+          [(ngModel)]="pickupAddress"
+
+
+        />
+
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Drop Location is :</mat-label>
+        <input
+          formControlName="dropAddres"
+          matInput
+          [disabled]="true"
+          required
+          [(ngModel)]="dropAddress"
+        />
+      </mat-form-field>
+
+      <mat-radio-group formControlName="selected" aria-label="Select an option">
+        <mat-radio-button value="Standard Delivery">Standard Delivery</mat-radio-button>
+        <mat-radio-button value="Premium Delivery">Premium Delivery</mat-radio-button>
+
+        <mat-radio-button value="VIP Delivery">VIP Delivery</mat-radio-button>
+      </mat-radio-group>
+
+      <br />
+      <br />
+      <button mat-button color="primary">Submit</button>
+    </form>
+  </mat-card-content>
+</mat-card>
